@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Calculator";
+}
+<h1>@ViewData["Title"]</h1>
+<label>Hours</label>
+<input id="hours" type="number" />
+<label>Hourly Rate (Fixed)</label>
+<input id="rate" value="50" readonly />
+<button id="btnCalculate">Calculate</button>
+<label>Total Price</label>
+<input id="total" readonly />
+
+@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+        $('#btnCalculate').click(function() {
+            let hours = parseFloat($('#hours').val());
+            let rate = parseFloat($('#rate').val());
+
+            if (hours <= 0 || isNaN(hours)) {
+            alert("Please enter a positive number of hours.");
+        } else {
+            let total = hours * rate;
+            $('#total').val(total.toFixed(2));
+        }
+        });
+    </script>
+}
