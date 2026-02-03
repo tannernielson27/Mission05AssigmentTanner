@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="~/Mission05AssigmentTanner.styles.css" asp-append-version="true" />
     <link rel="icon" type="image/x-icon" href ="~/icon.png" />
 </head>
+
+<!--Shows the navbar-->
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
@@ -32,12 +34,13 @@
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div class="container"> 
         <main role="main" class="pb-3">
-            @RenderBody()
+            @RenderBody() <!--Render the page that you are on-->
         </main>
     </div>
 
+    <!--Footer-->
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2026 - Tanner Nielson - All rights reserved - <a asp-area="" asp-controller="Home" asp-action="Index">Hobbies</a> - <a asp-area="" asp-controller="Home" asp-action="Calculator">Calculator</a>

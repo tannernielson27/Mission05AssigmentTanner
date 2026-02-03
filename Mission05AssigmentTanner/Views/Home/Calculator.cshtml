@@ -2,6 +2,7 @@
     ViewData["Title"] = "Calculator";
 }
 <h1>@ViewData["Title"]</h1>
+<!--Form-->
 <label>Hours</label>
 <input id="hours" type="number" />
 <label>Hourly Rate (Fixed)</label>
@@ -12,7 +13,7 @@
 
 @section Scripts {
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script>
+    <script> //Calculation logic
         $('#btnCalculate').click(function() {
             let hours = parseFloat($('#hours').val());
             let rate = parseFloat($('#rate').val());

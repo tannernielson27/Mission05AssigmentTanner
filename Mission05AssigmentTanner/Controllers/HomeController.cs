@@ -6,12 +6,12 @@ namespace Mission05AssigmentTanner.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View(); //Shows the homepage
         }
 
         public IActionResult Calculator()
         {
-            return View();
+            return View(); //Shows calculator view
         }
 
     }
